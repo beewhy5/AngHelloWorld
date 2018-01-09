@@ -15,7 +15,7 @@ app.directive('myTodo',
 
 app.controller('main', function ($scope) {
     $scope.todo = [
-        { name: 'BILLS WIN!', completed: true },
+        { name: 'BILLS LOSE!', completed: true },
         { name: 'Ravens lose', completed: false },
         { name: 'Titans lose', completed: true },
         { name: 'Chargers lose', completed: true }
