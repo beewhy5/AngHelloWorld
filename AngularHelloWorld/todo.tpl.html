@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <h1>{{title}}</h1>
+    <div ng-repeat="todo in list">
+        <input type="checkbox" ng-model="todo.completed">{{todo.name}}
+    </div>
+
+    <h1>Completed Items</h1>
+        <div ng-repeat="todo in list | completed">
+            <label ng-model="todo.completed">{{todo.name}}</label>
+        </div>
+</body>
+</html>
