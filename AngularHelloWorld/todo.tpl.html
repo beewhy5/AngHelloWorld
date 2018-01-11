@@ -5,11 +5,16 @@
 	<meta charset="utf-8" />
 </head>
 <body>
+    <!-- Two Way Binding Added-->
+    <input type="text" ng-model="yourname" placeholder="Enter a name here">
+    <h1>Hello, {{yourname}}!</h1>
+
     <h1>{{title}}</h1>
     <div ng-repeat="todo in list">
         <input type="checkbox" ng-model="todo.completed">{{todo.name}}
     </div>
 
+    <!-- Use of Filters (Completed)-->
     <h1>Completed Items</h1>
         <div ng-repeat="todo in list | completed">
             <label ng-model="todo.completed">{{todo.name}}</label>

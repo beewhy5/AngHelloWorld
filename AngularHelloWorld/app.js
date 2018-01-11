@@ -20,6 +20,7 @@ app.controller('main', function ($scope) {
         { name: 'Titans lose', completed: true },
         { name: 'Chargers lose', completed: true }
     ];
+    $scope.yourname = "Brad";
 
 });
 
