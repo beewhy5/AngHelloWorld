@@ -11,13 +11,22 @@
 
     <h1>{{title}}</h1>
     <div ng-repeat="todo in list">
-        <input type="checkbox" ng-model="todo.completed">{{todo.name}}
-    </div>
 
-    <!-- Use of Filters (Completed)-->
-    <h1>Completed Items</h1>
-        <div ng-repeat="todo in list | completed">
-            <label ng-model="todo.completed">{{todo.name}}</label>
-        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" ng-model="todo.completed">
+                    </div>
+                </div>
+            {{todo.name}}
+            <!-- <input type="text" class="form-control" aria-label="Text input with checkbox">-->
+            </div>
+                </div>
+
+                <!-- Use of Filters (Completed)-->
+                <h1>Completed Items</h1>
+                <div ng-repeat="todo in list | completed">
+                    <label ng-model="todo.completed">{{todo.name}}</label>
+                </div>
 </body>
 </html>
