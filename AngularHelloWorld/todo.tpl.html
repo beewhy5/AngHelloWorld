@@ -9,24 +9,23 @@
     <input type="text" ng-model="yourname" placeholder="Enter a name here">
     <h1>Hello, {{yourname}}!</h1>
 
-    <h1>{{title}}</h1>
-    <div ng-repeat="todo in list">
+        <h1>{{title}}</h1>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    <input type="checkbox" ng-model="todo.completed">
-                    </div>
-                </div>
-            {{todo.name}}
-            <!-- <input type="text" class="form-control" aria-label="Text input with checkbox">-->
-            </div>
-                </div>
+    <form ng-submit="addItem(myItem)" ng-controller="main">
+        <input type="text" ng-model="myItem" value="Rice">
+        <button type="submit">Add</button>
 
-                <!-- Use of Filters (Completed)-->
-                <h1>Completed Items</h1>
-                <div ng-repeat="todo in list | completed">
-                    <label ng-model="todo.completed">{{todo.name}}</label>
-                </div>
+        <ul>
+            <li ng-repeat="text in todo"><input type="checkbox" ng-model="text.completed"> {{text.name}}</li>
+        </ul>
+
+        <!-- Use of Filters (Completed)-->
+        <h1>Completed Items</h1>
+        <div ng-repeat="thing in todo | completed">
+            <label ng-model="thing.completed">{{thing.name}}</label>
+        </div>
+
+    </form>
+
 </body>
 </html>

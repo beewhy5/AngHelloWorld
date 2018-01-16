@@ -15,11 +15,20 @@ app.directive('myTodo',
 
 app.controller('main', function ($scope) {
     $scope.todo = [
-        { name: 'BILLS LOSE!', completed: true },
-        { name: 'Ravens lose', completed: false },
-        { name: 'Titans lose', completed: true },
-        { name: 'Chargers lose', completed: true }
+        { name: 'Chips', completed: true },
+        { name: 'Corn', completed: false },
+        { name: 'Steak', completed: true },
+        { name: 'Cheese', completed: true }
     ];
+
+    $scope.addItem = function () {
+        var obj = {
+            name: this.myItem,
+            completed: false
+        };
+        $scope.todo.push(obj);
+    }
+
     $scope.yourname = "Brad";
 
 });
