@@ -37,7 +37,7 @@ app.filter('completed', function () {
     return function (input) {
         var out = [];
         for (var i = 0; i < input.length; i++) {
-            if (input[i].completed) {
+            if (!input[i].completed) {
                 out.push(input[i]);
             }
         }
